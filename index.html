@@ -1,32 +1,52 @@
-<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
 <!DOCTYPE html>
 <!-- Оболочка документа, указываем язык содержимого -->
 <html lang="ru">
 <!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
 <head>
 	<!-- Заголовок страницы в браузере -->
-	<title>Сайт тест</title>
+	<title>B1nary</title>
 	<!-- Подключаем CSS -->
 	<link rel="stylesheet" href="css/style.css">
 	<!-- Кодировка страницы -->
 	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
 </head>
 <!-- Отображаемое тело страницы -->
 <body>
 	<div class="wrapper">
 		<div class="content">
 			<!-- Menu block -->
-			<div class="menu">
-				<div class="container">
-					<ul class="menu__list">
-						<a href="#home"><li class="menu__list-item item-active">HOME</li></a>
-						<a href="#about__us"><li class="menu__list-item">ABOUT US</li></a>
-						<a href="#portfolio"><li class="menu__list-item">PORTFOLIO</li></a>
-						<a href="#partners"><li class="menu__list-item">partners</li></a>
-						<a href="#contact"><li class="menu__list-item">CONTACT</li></a>
-					</ul>
+			<header class="header">
+				<div class='container'>
+					<div class="header__body">
+						<a href="#" class="header__logo">
+							<img src="img/logo_slider.png" alt="">
+						</a>
+						<div class="header__burger">
+							<span></span>
+						</div>
+						<nav class="header__menu">
+							<ul class="header__list">
+								<li>
+									<a href="#home" class="header__link item-active">HOME</a>
+								</li>
+								<li>
+									<a href="#about__us" class="header__link">ABOUT US</a>
+								</li>
+								<li>
+									<a href="#portfolio" class="header__link">PORTFOLIO</a>
+								</li>
+								<li>
+									<a href="#partners" class="header__link">partners</a>
+								</li>
+								<li>
+									<a href="#contact" class="header__link">CONTACT</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
 				</div>
-			</div>
+			</header>
 
 			<!-- Slider block -->
 			<div class="slider" id="home">
@@ -40,7 +60,8 @@
 							<div class="slider__text">for your app, logo, website</div>
 						</div>
 						<div class="slider__btn">
-							<input type="submit" value="read more">
+							<a href="#about__us"><input type="submit" value="read more"></a>
+							<a href="#about__us"><span></span></a>
 						</div>
 					</div>
 				</div>
@@ -125,7 +146,7 @@
 							</div>
 						</div>
 						<div class="portfolio__btn">
-							<input type="submit" value="read more">
+							<a href="#partners"><input type="submit" value="read more"></a>
 						</div>
 					</div>
 				</div>
@@ -202,6 +223,11 @@
 			</div>
 		</footer>
 	</div>
+	
+
+	<!-- Подключаем jQuery -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+	<!-- Подключаем файл JS скриптов -->
 	<script src="js/scroll.js"></script>
-</body>
+	<script src="js/burger-menu.js"></script></body>
 </html>
