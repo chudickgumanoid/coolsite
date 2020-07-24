@@ -7,8 +7,10 @@
 	<title>B1nary</title>
 	<!-- Подключаем CSS -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- Подключение иконочного шрифта -->
+	<link rel="stylesheet" href="css/all.min.css">
 	<!-- Кодировка страницы -->
-	<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 </head>
 <!-- Отображаемое тело страницы -->
@@ -19,13 +21,10 @@
 			<header class="header">
 				<div class='container'>
 					<div class="header__body">
-						<a href="#" class="header__logo">
-							<img src="img/logo_slider.png" alt="">
-						</a>
 						<div class="header__burger">
 							<span></span>
 						</div>
-						<nav class="header__menu">
+						<nav class="header__menu burger_menu">
 							<ul class="header__list">
 								<li>
 									<a href="#home" class="header__link item-active">HOME</a>
@@ -61,7 +60,9 @@
 						</div>
 						<div class="main__btn">
 							<a href="#about__us"><input type="submit" value="read more"></a>
-							<a href="#about__us"><span></span></a>
+						</div>
+						<div class="main__arrow">
+							<a href="#about__us" class="link"><i class="fas fa-chevron-down"></i></a>
 						</div>
 					</div>
 				</div>
@@ -167,13 +168,13 @@
 
 								<input type="email" class="form__input" placeholder="YOUR E-MAIL">
 
-								<textarea class="form__input textarea" value="MESSAGE" placeholder="Text"></textarea>
+								<textarea class="form__input textarea" value="MESSAGE" placeholder="Enter your message"></textarea>
 							</div>
 							<div class="contact__data">
 								<div class="contact__data-text">Have an idea for a project? Just looking to 
 								explore and see the possibilities?
 								I'm here to help.</div>
-								<div class="contact__data-name">Postma Elena</div>
+								<div class="contact__data-name">Obrazkov Alexandr</div>
 								<div class="contact__data-social">
 									<a href="#"><img src="img/contact/01.png" alt=""></a>
 									<a href="#"><img src="img/contact/02.png" alt=""></a>
@@ -198,7 +199,7 @@
 					<div class="footer__nav">
 						<ul class="footer__list">
 							<a href="#home" ><li>Home</li></a>
-							<a href="https://vk.com/chydickgumanoid" target="_blank"><li>VK</li></a>
+							<a href="https://vk.com/chydickgumanoid" target="_blank"><li>Vk</li></a>
 							<a href="https://www.instagram.com/chydickgumanoid/?hl=ru" target="_blank"><li>Instagram</li></a>
 							<a href="https://www.youtube.com/channel/UCE_FZhzWEjJ6Xxmcm61UQDA" target="_blank"><li>YouTube</li></a>
 						</ul>
@@ -216,6 +217,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 	<!-- Подключаем файл JS скриптов -->
 	<script src="js/slick.min.js"></script>
+	<script src="js/all.min.js"></script>
 	<script src="js/script.js"></script>
 	<script src="js/scroll.js"></script>
 	<script src="js/burger-menu.js"></script>
