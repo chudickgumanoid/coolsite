@@ -75,6 +75,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+@font-face {
+  font-family: "LatoBold";
+  src: url("../fonts/LatoBold.eot");
+  src: local("☺"), url("../fonts/LatoBold.woff") format("woff"), url("../fonts/LatoBold.ttf") format("truetype"), url("../fonts/LatoBold.svg") format("svg");
+  font-weight: 700;
+  font-style: 700;
+}
+@font-face {
+  font-family: "LatoRegular";
+  src: url("../fonts/LatoRegular.eot");
+  src: local("☺"), url("../fonts/LatoRegular.woff") format("woff"), url("../fonts/LatoRegular.ttf") format("truetype"), url("../fonts/LatoRegular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   font-family: Lato;
 }
@@ -248,7 +262,7 @@ body {
 }
 .main__logo img {
   max-width: 100%;
-  margin-top: -5rem;
+  margin: -40px 0px 0px 0px;
 }
 .main__header {
   display: flex;
@@ -261,7 +275,7 @@ body {
   font-family: "Lato";
   font-size: 34px;
   font-weight: 400;
-  line-height: 60px;
+  line-height: 1.2;
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 5.5px;
@@ -272,6 +286,7 @@ body {
   font-size: 26px;
   font-weight: 400;
   letter-spacing: 5px;
+  line-height: 1.5;
   position: relative;
 }
 .main__text:after {
@@ -282,7 +297,7 @@ body {
   top: 70px;
   left: 50%;
   background-color: #fff;
-  margin: 0px 0px 0px -50px;
+  margin: 20px 0px 0px -50px;
 }
 .main__btn {
   margin-top: 180px;
@@ -297,42 +312,25 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 1px;
+  cursor: pointer;
 }
 .main__btn input:hover {
   background: #fff;
-  transition: 0.5s;
+  transition: all 0.5s ease 0s;
   color: #000;
-  margin: 0px 0px 0px 0px;
 }
-.main__btn a {
+.main__arrow {
+  margin: 40px 0px 40px 0px;
+}
+
+.link {
+  text-decoration: none;
   cursor: pointer;
 }
-.main__btn a span {
-  position: relative;
-}
-.main__btn a span:before {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 5px;
-  background-color: #fff;
-  left: -100.5px;
-  z-index: 2;
-  margin: 120px 13px 0px 0px;
-  transform: rotate(40deg);
-  border-radius: 25%;
-}
-.main__btn a span:after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 5px;
-  background-color: #fff;
-  left: -100.5px;
-  z-index: 2;
-  margin: 120px 0px 0px 13px;
-  transform: rotate(-40deg);
-  border-radius: 25%;
+
+.fa-chevron-down {
+  font-size: 30px;
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -358,12 +356,6 @@ body {
     font-size: 15px;
     letter-spacing: 1px;
   }
-  .main__btn a span:before {
-    margin: 110px 13px 0px 0px;
-  }
-  .main__btn a span:after {
-    margin: 110px 0px 0px 13px;
-  }
 }
 @media (max-width: 480px) {
   .main__title {
@@ -388,12 +380,6 @@ body {
     font-size: 15px;
     letter-spacing: 1px;
   }
-  .main__btn a span:before {
-    margin: 110px 13px 0px 0px;
-  }
-  .main__btn a span:after {
-    margin: 110px 0px 0px 13px;
-  }
 }
 .about__body {
   max-width: 823px;
@@ -411,7 +397,7 @@ body {
   font-size: 14px;
   font-weight: 300;
   text-align: center;
-  line-height: 25.89px;
+  line-height: 1.5;
   margin: 0px auto;
 }
 .about__row {
@@ -586,7 +572,7 @@ body {
   margin: 0px auto;
 }
 .portfolio__btn {
-  padding: 60px 0px 60px 0px;
+  padding: 40px 0px 60px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -601,6 +587,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.67px;
+  cursor: pointer;
 }
 .portfolio__btn input:hover {
   background: #000;
@@ -792,6 +779,7 @@ body {
   max-width: 250px;
   font-size: 16px;
   flex: 0 0 300px;
+  line-height: 1.2;
 }
 .contact__data-text {
   color: #000;
@@ -817,7 +805,7 @@ body {
   font-weight: 700;
 }
 .contact__btn {
-  padding: 0px 0px 60px 0px;
+  padding: 40px 0px 40px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -825,34 +813,40 @@ body {
 .contact__btn input {
   background: none;
   border: 2px solid #000;
-  padding: 14px 40px;
+  padding: 14px 45px 14px 45px;
   color: #000;
   font-family: Lato;
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.67px;
+  cursor: pointer;
 }
 .contact__btn input:hover {
   background: #000;
-  transition: 0.5s;
+  transition: all 0.3s ease 0s;
   color: #fff;
 }
 
 .form__input {
   border-bottom: 2px solid #000;
   margin: 0px 10px 0px 0px;
-  font-family: Lato;
+  font-family: "LatoBold";
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   padding: 10px;
 }
+.form__input:focus {
+  border-bottom: 2px solid #ada074;
+  transition: all 0.3s ease 0s;
+}
 
 .textarea {
   padding: 75px 0px 0px 0px;
   width: 83%;
-  height: 150px;
+  min-height: 150px;
+  resize: vertical;
 }
 
 @media (max-width: 768px) {
