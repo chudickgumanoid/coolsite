@@ -270,6 +270,19 @@ body{
 .fa-chevron-down {
 	font-size: 30px;
 	color: #fff;
+	animation: up 1s infinite;
+	animation-timing-function: linear;
+}
+@keyframes up {
+	0%{
+		transform: translateY(20px);
+	}
+	50%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(20px);
+	}
 }
 
 @media (max-width: 768px){
@@ -576,7 +589,7 @@ body{
 	.slick-arrow{
 		position: absolute;
 		top: 50%;
-		margin: 5px -40px 0px -40px;
+		margin: -10px -40px 0px -40px;
 		z-index: 10;
 		font-size: 0;
 		width: 20px;
